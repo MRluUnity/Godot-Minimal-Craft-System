@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BaseCraftTable" load_steps=2 format=3 uid="uid://blg57tdob5vt6"]
+
+[ext_resource type="Script" path="res://scripts/base_craft_table.gd" id="1_ldo75"]
+
+[resource]
+script = ExtResource("1_ldo75")
+craft_name = "三乘三"
+craft_table_type = 0
+craft_table_dic = {
+"木棍": {
+"位码": [2, -1],
+"配方": ["木头", "木头"]
+},
+"镐子": {
+"位码": [0, 0, 1, 2, -1],
+"配方": ["铁", "铁", "铁", "木头", "木头"]
+}
+}
+desc = "三乘三的配方表"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BaseBag" load_steps=5 format=3 uid="uid://bitwe7i8kfc0w"]
+
+[ext_resource type="Script" path="res://scripts/base_item.gd" id="1_ogdq6"]
+[ext_resource type="Script" path="res://scripts/base_bag.gd" id="1_qo6ap"]
+[ext_resource type="Resource" uid="uid://cdvejb2myo2lj" path="res://resource/items/iron.tres" id="2_4gavi"]
+[ext_resource type="Resource" uid="uid://8o6l11bvlnyi" path="res://resource/items/wood.tres" id="3_ws05t"]
+
+[resource]
+script = ExtResource("1_qo6ap")
+bag_name = "玩家背包"
+bag_items = Array[ExtResource("1_ogdq6")]([ExtResource("2_4gavi"), ExtResource("2_4gavi"), ExtResource("2_4gavi"), ExtResource("3_ws05t"), ExtResource("3_ws05t"), ExtResource("3_ws05t"), ExtResource("2_4gavi"), ExtResource("3_ws05t"), null, null, null, null, null, null, null, null])

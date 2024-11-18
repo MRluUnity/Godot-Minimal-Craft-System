@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BaseItem" load_steps=4 format=3 uid="uid://cdvejb2myo2lj"]
+
+[ext_resource type="Script" path="res://scripts/base_item.gd" id="1_b36e1"]
+[ext_resource type="Texture2D" uid="uid://d13i6jfe7r41r" path="res://asset/item.png" id="2_25xic"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dli4p"]
+atlas = ExtResource("2_25xic")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_b36e1")
+texture = SubResource("AtlasTexture_dli4p")
+item_name = "铁"
+desc = "一种基础材料"

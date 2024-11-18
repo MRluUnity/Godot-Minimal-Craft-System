@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://daoqt0nnjibs4"]
+
+[ext_resource type="Script" path="res://scene/world.gd" id="1_hybya"]
+[ext_resource type="PackedScene" uid="uid://c2262o3jownna" path="res://scene/slot.tscn" id="2_ylctw"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_hybya")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CraftPanelContainer" type="PanelContainer" parent="UI/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CraftGridContainer" type="GridContainer" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="Slot" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot2" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot3" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot4" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot5" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot6" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot7" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot8" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Slot9" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/CraftGridContainer" instance=ExtResource("2_ylctw")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "检测配方"
+
+[node name="BagPanelContainer" type="PanelContainer" parent="UI/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BagGridContainer" type="GridContainer" parent="UI/PanelContainer/MarginContainer/HBoxContainer/BagPanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 4
+
+[node name="DraggedSlot" parent="UI/PanelContainer" instance=ExtResource("2_ylctw")]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[connection signal="pressed" from="UI/PanelContainer/MarginContainer/HBoxContainer/CraftPanelContainer/Button" to="." method="_on_button_pressed"]
